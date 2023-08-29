@@ -1,0 +1,8 @@
+@import "shared/scss/colors";
+@import "shared/scss/fonts";
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--gray-1);
+}

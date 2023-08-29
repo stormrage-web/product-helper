@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  padding: 40px 60px;
+  background-color: var(--snowy);
+
+  &>*:not(:last-child) {
+    height: 24px;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
+    height: 60px;
+    padding: 30px;
+  }
+}
