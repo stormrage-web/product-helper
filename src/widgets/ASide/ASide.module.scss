@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 306px;
   height: calc(100% - 78px);
+  padding-bottom: 10px;
   background-color: var(--snowy);
 
   &.mobile {

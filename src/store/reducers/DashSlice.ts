@@ -5,7 +5,7 @@ const initialState: IDashState = {
 	message: "",
 	first_graph: undefined,
 	second_graph: undefined,
-	third_graph: undefined,
+	thirs_graph: undefined,
 	isLoading: false,
 };
 
@@ -21,7 +21,7 @@ export const dashSlice = createSlice({
 			state.message = action.payload.message || "";
 			state.first_graph = action.payload.first_graph;
 			state.second_graph = action.payload.second_graph;
-			state.third_graph = action.payload.third_graph;
+			state.thirs_graph = action.payload.thirs_graph;
 			state.isLoading = false;
 		},
 	},

@@ -7,12 +7,13 @@ import { fetchList } from "../../store/reducers/ActionCreators";
 
 const { Dragger } = Upload;
 
-const Header = () => {
+const Header = ({setLoading}: {setLoading: (x: boolean) => void}) => {
 	const dispatch = useAppDispatch();
 	const [dataId, setDataId] = useState("");
 
 	const props: UploadProps = {
 		name: "file",
+		accept: ".csv",
 		maxCount: 1,
 		action: "http://51.250.91.130:5000/upload",
 		onChange(info) {
@@ -35,6 +36,7 @@ const Header = () => {
 
 	const handleOk = () => {
 		if (dataId) {
+			setLoading(true);
 			dispatch(fetchList({ data_id: dataId }));
 			setModalActive(false);
 		}

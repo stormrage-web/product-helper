@@ -27,6 +27,6 @@ export interface IDashState {
     message: string;
     first_graph: IPlot | undefined;
     second_graph: IPlot | undefined;
-    third_graph: IPlot | undefined;
+    thirs_graph: IPlot | undefined;
     isLoading: boolean;
 }

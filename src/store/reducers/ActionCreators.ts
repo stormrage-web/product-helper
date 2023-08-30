@@ -17,7 +17,7 @@ export const fetchList =
 export const fetchHypo =
 	({ hypothesis_id }: { hypothesis_id: string }) =>
 		async (dispatch: AppDispatch) => {
-			dispatch(dashSlice.actions.dashListFetching);
+			dispatch(dashSlice.actions.dashListFetching());
 			axios.get(mainEndPoint + "hypothesis?hypothesis_id=" + hypothesis_id).then(result => {
 				dispatch(dashSlice.actions.dashListFetchingSuccess({ ...result.data }));
 			}).catch(error => console.log(error));
