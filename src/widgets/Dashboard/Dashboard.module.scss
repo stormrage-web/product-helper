@@ -41,6 +41,10 @@
   }
 
   @media (max-width: 1024px) {
-    margin-right: 24px;
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
   }
 }
