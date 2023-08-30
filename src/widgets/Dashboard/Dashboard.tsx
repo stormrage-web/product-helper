@@ -22,9 +22,6 @@ const Dashboard = ({ message, isLoading, first_graph, second_graph, thirs_graph 
 	const items: TabsProps["items"] = Object.keys(circle.data).map(item => ({ key: item, label: item }));
 	const [activeItem, setActiveItem] = useState<string>(items[0].key);
 
-	console.log({...[{MOBILE_PHONE: 1}, {ABS: 1}]});
-	console.log(first_graph && Object.keys((JSON.parse(first_graph.data as unknown as any)[Object.keys((JSON.parse(first_graph.data as unknown as any)))[0]])).map((item) => ({ name: item, ...(Object.keys(JSON.parse(first_graph.data as unknown as any)).map((key => ({ [key]: (JSON.parse(first_graph.data as unknown as any) as any)[key][item] }))).reduce((prev, cur) => (prev[Object.keys(cur)[0]] = cur[Object.keys(cur)[0]], prev), {}))})));
-
 	return (
 		<div className={styles.wrapper}>
 			<>
